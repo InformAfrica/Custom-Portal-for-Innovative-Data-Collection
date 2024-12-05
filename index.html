@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disinformation Analysis Submission Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="form-container">
+        <div class="form-box">
+            <h1>Submit Disinformation Analysis Data</h1>
+            <form method="POST" action="submit_form.php">
+                <!-- Link of the Post -->
+                <label for="post_link">Link of the Post:</label>
+                <input type="url" name="post_link" id="post_link" required><br>
+
+                <!-- Date of the Post -->
+                <label for="post_date">Date of the Post:</label>
+                <input type="date" name="post_date" id="post_date" required><br>
+
+                <!-- Platform -->
+                <label for="platform">Platform:</label>
+                <select name="platform" id="platform" required>
+                    <option value="Facebook">Facebook</option>
+                    <option value="Twitter">Twitter</option>
+                    <option value="YouTube">YouTube</option>
+                    <option value="TikTok">TikTok</option>
+                    <option value="Other">Other</option>
+                </select><br>
+
+                <!-- Type of Post -->
+                <label for="post_type">Type of Post:</label>
+                <select name="post_type" id="post_type" required>
+                    <option value="Text">Text</option>
+                    <option value="Video">Video</option>
+                    <option value="Image">Image</option>
+                    <option value="Text and Video">Text and Video</option>
+                    <option value="Text and Photo">Text and Photo</option>
+                    <option value="Photo and Video">Photo and Video</option>
+                    <option value="All">All</option>
+                </select><br>
+
+                <!-- Strategy Target Audience -->
+                <label for="strategy_target_audience">Strategy Target Audience</label>
+                <input type="text" name="strategy_target_audience" id="strategy_target_audience" required><br>
+
+                <!-- Strategy Target Ends -->
+                <label for="strategy_target_ends">Strategy Target Ends</label>
+                <input type="text" name="strategy_target_ends" id="strategy_target_ends" required><br>
+
+                <!-- Objectives -->
+                <label for="objectives">Objectives</label>
+                <input type="text" name="objectives" id="objectives" required><br>
+
+                <!-- Target Audience -->
+                <label for="target_audience">Target Audience</label>
+                <input type="text" name="target_audience" id="target_audience" required><br>
+
+                <!-- Narrative -->
+                <label for="narrative">Narrative</label>
+                <input type="text" name="narrative" id="narrative" required><br>
+
+                <!-- Content -->
+                <label for="content">Content</label>
+                <input type="text" name="content" id="content" required><br>
+
+                <!-- Social Assets -->
+                <label for="social_assets">Social Assets</label>
+                <input type="text" name="social_assets" id="social_assets" required><br>
+
+                <!-- Legitimacy -->
+                <label for="legitimacy">Legitimacy</label>
+                <input type="text" name="legitimacy" id="legitimacy" required><br>
+
+                <!-- Microtarget -->
+                <label for="microtarget">Microtarget</label>
+                <input type="text" name="microtarget" id="microtarget" required><br>
+
+                <!-- Channels -->
+                <label for="channels">Channels</label>
+                <input type="text" name="channels" id="channels" required><br>
+
+                <!-- Pump Priming -->
+                <label for="pump_priming">Pump Priming</label>
+                <input type="text" name="pump_priming" id="pump_priming" required><br>
+
+                <!-- Content Delivery -->
+                <label for="content_delivery">Content Delivery</label>
+                <input type="text" name="content_delivery" id="content_delivery" required><br>
+
+                <!-- Exposure Maximization -->
+                <label for="exposure_maximization">Exposure Maximization</label>
+                <input type="text" name="exposure_maximization" id="exposure_maximization" required><br>
+
+                <!-- Online Harms -->
+                <label for="online_harms">Online Harms</label>
+                <input type="text" name="online_harms" id="online_harms" required><br>
+
+                <!-- Offline Activity -->
+                <label for="offline_activity">Offline Activity</label>
+                <input type="text" name="offline_activity" id="offline_activity" required><br>
+
+                <!-- Persist Information -->
+                <label for="persist_information">Persist Information</label>
+                <input type="text" name="persist_information" id="persist_information" required><br>
+
+                <!-- Submit Button -->
+                <button type="submit">Submit</button>
+            </form>
+
+            <!-- Download Data -->
+            <h2>Download Data</h2>
+            <button id="download-csv">Download CSV</button>
+            <button id="download-json">Download JSON</button>
+
+            <script>
+                // Event listener for CSV download
+                document.getElementById('download-csv').addEventListener('click', function() {
+                    window.location.href = 'download_csv.php';  // Trigger CSV download
+                });
+
+                // Event listener for JSON download
+                document.getElementById('download-json').addEventListener('click', function() {
+                    window.location.href = 'download_json.php';  // Trigger JSON download
+                });
+            </script>
+        </div>
+    </div>
+</body>
+</html>
